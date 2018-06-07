@@ -12,7 +12,26 @@ import customers from './assets/customers';
 import Autocomplete from './components/Autocomplete'
 
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    this.customers = customers;
+  },
+  data() {
+    return {
+      customers: []
+    };
+  },
+  methods: {
+    customerSelected(customer) {
+      console.log(`Customer Selected:\nid: ${customer.id}\nname: ${customer.name}`);
+    },
+    onChange(value) {
+      // do something with the current value
+    }
+  },
+  components: {
+    Autocomplete
+  }
 }
 </script>
 
