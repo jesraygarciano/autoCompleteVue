@@ -2,10 +2,15 @@
   <div id="app">
     <img src="./assets/logo.png">
     <router-view/>
+    <Autocomplete items="customers" filterby="name"/>
   </div>
 </template>
 
 <script>
+
+import customers from './assets/customers';
+import Autocomplete from './components/Autocomplete'
+
 export default {
   name: 'App'
 }
